@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    @apply bg-ink-950 text-white font-sans;
+  }
+
+  ::selection {
+    @apply bg-gold-500/30 text-gold-100;
+  }
+
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    @apply bg-ink-950;
+  }
+  ::-webkit-scrollbar-thumb {
+    @apply bg-gold-700/60 rounded-full;
+  }
+}
+
+@layer components {
+  .gold-text {
+    background: linear-gradient(120deg, #f5e08e 0%, #d4a017 50%, #b07d10 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  .btn-gold {
+    @apply inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-full font-medium text-ink-950 transition-all duration-300;
+    background: linear-gradient(120deg, #efc94f 0%, #d4a017 100%);
+  }
+  .btn-gold:hover {
+    background: linear-gradient(120deg, #f5e08e 0%, #efc94f 100%);
+    transform: translateY(-1px);
+    box-shadow: 0 10px 30px -10px rgba(212, 160, 23, 0.5);
+  }
+
+  .btn-ghost {
+    @apply inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-full font-medium text-white/80 border border-white/20 hover:border-gold-400 hover:text-gold-200 transition-all duration-300;
+  }
+
+  .eyebrow {
+    @apply inline-flex items-center gap-3 text-[0.7rem] tracking-[0.35em] uppercase text-gold-400 font-medium;
+  }
+  .eyebrow::before {
+    content: '';
+    @apply w-8 h-px bg-gold-500;
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm create *)",
+      "Bash(npm install *)",
+      "Bash(npm run *)",
+      "Bash(cwebp -q 82 -m 6 /Users/trabalho/Documents/contabilidade/public/hero.jpg -o /Users/trabalho/Documents/contabilidade/public/hero.webp)",
+      "Bash(cwebp -q 80 -m 6 -resize 900 0 /Users/trabalho/Documents/contabilidade/public/hero.jpg -o /Users/trabalho/Documents/contabilidade/public/hero-sm.webp)",
+      "Bash(curl -s -L -I \"https://source.unsplash.com/featured/?handshake,business\")",
+      "WebSearch",
+      "Bash(gh auth *)",
+      "Bash(gh api *)",
+      "Bash(git init *)",
+      "Bash(git add *)",
+      "Bash(git -c user.email=leofrizzi15@gmail.com -c user.name=leonardofrizzi commit -m 'feat: landing page Antonello Contabilidade *)",
+      "Bash(gh repo *)",
+      "Read(//Users/trabalho/Documents/**)",
+      "Bash(rsync -a --exclude='node_modules' --exclude='.git' --exclude='dist' --exclude='.vite' contabilidade/ bc-gestao-contabil/)"
+    ]
+  }
+}
