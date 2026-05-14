@@ -14,7 +14,7 @@
   }
 
   ::selection {
-    @apply bg-gold-500/30 text-gold-100;
+    @apply bg-gold-500/30 text-white;
   }
 
   ::-webkit-scrollbar {
@@ -24,34 +24,30 @@
     @apply bg-ink-950;
   }
   ::-webkit-scrollbar-thumb {
-    @apply bg-gold-700/60 rounded-full;
+    @apply bg-gold-500/60 rounded-full;
   }
 }
 
 @layer components {
   .gold-text {
-    background: linear-gradient(120deg, #f5e08e 0%, #d4a017 50%, #b07d10 100%);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
+    color: #ed5a08;
   }
 
   .btn-gold {
-    @apply inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-full font-medium text-ink-950 transition-all duration-300;
-    background: linear-gradient(120deg, #efc94f 0%, #d4a017 100%);
+    @apply inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-full font-medium text-white transition-all duration-300 bg-[#ed5a08];
   }
   .btn-gold:hover {
-    background: linear-gradient(120deg, #f5e08e 0%, #efc94f 100%);
+    background-color: #d44e07;
     transform: translateY(-1px);
-    box-shadow: 0 10px 30px -10px rgba(212, 160, 23, 0.5);
+    box-shadow: 0 10px 30px -10px rgba(237, 90, 8, 0.55);
   }
 
   .btn-ghost {
-    @apply inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-full font-medium text-white/80 border border-white/20 hover:border-gold-400 hover:text-gold-200 transition-all duration-300;
+    @apply inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-full font-medium text-white/80 border border-white/20 hover:border-gold-500 hover:text-gold-500 transition-all duration-300;
   }
 
   .eyebrow {
-    @apply inline-flex items-center gap-3 text-[0.7rem] tracking-[0.35em] uppercase text-gold-400 font-medium;
+    @apply inline-flex items-center gap-3 text-[0.7rem] tracking-[0.35em] uppercase text-gold-500 font-medium;
   }
   .eyebrow::before {
     content: '';

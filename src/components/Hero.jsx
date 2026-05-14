@@ -1,6 +1,9 @@
 import { useEffect, useRef } from 'react'
 import { gsap } from 'gsap'
 
+const WHATSAPP =
+  'https://wa.me/5524998322300?text=Ol%C3%A1!%20Quero%20conhecer%20os%20servi%C3%A7os%20da%20BC%20Gest%C3%A3o%20Cont%C3%A1bil.'
+
 function IconWhatsApp({ size = 18 }) {
   return (
     <svg viewBox="0 0 24 24" width={size} height={size} fill="currentColor">
@@ -45,28 +48,29 @@ export default function Hero() {
       <div className="relative max-w-[1400px] mx-auto px-8 w-full">
         <div className="max-w-3xl">
           <h1 className="font-display text-[3rem] sm:text-[4rem] lg:text-[5.5rem] leading-[0.95] tracking-tight mb-10">
-            <span className="h-line block">Soluções contábeis</span>
-            <span className="h-line block">para o <span className="gold-text italic font-light">crescimento</span></span>
-            <span className="h-line block">da sua empresa.</span>
+            <span className="h-line block">Mais que contador.</span>
+            <span className="h-line block"><span className="gold-text italic font-light">Parceiro</span> do seu</span>
+            <span className="h-line block">negócio.</span>
           </h1>
 
-          <p className="h-desc text-lg text-white/70 max-w-lg leading-relaxed mb-12 font-light">
-            Abertura de empresa, folha, notas fiscais, imposto de renda, certificado digital
-            e regularização — tudo em um só lugar.
+          <p className="h-desc text-lg text-white/70 max-w-xl leading-relaxed mb-12 font-light">
+            A BC Gestão Contábil une tecnologia e atendimento humanizado pra você
+            decidir melhor — não só pagar imposto. Agende seu horário e descubra
+            que um contador faz muito mais que enviar guias.
           </p>
 
-          <div className="h-cta flex flex-wrap items-center gap-6">
+          <div className="h-cta flex flex-wrap items-center gap-4">
             <a
-              href="https://wa.me/5551991329065?text=Ol%C3%A1!%20Quero%20conhecer%20os%20servi%C3%A7os%20da%20Antonello%20Contabilidade."
+              href={WHATSAPP}
               target="_blank"
               rel="noreferrer"
               className="btn-gold"
             >
               <IconWhatsApp size={18} />
-              Falar no WhatsApp
+              Agendar conversa
             </a>
             <a href="#servicos" className="btn-ghost">
-              Conhecer serviços
+              Ver serviços
             </a>
           </div>
         </div>

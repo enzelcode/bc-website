@@ -1,7 +1,7 @@
 import { useEffect, useRef } from 'react'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
-import { HeartHandshake, Sparkles, LayoutGrid, Zap } from 'lucide-react'
+import { Cpu, HeartHandshake, LineChart, CalendarCheck } from 'lucide-react'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -15,24 +15,24 @@ function IconWhatsApp({ size = 18 }) {
 
 const differentials = [
   {
+    icon: Cpu,
+    t: 'Tecnologia que agiliza',
+    d: 'Processos digitais, assinatura eletrônica e Certificado Digital emitido em minutos. Sem fila, sem papelada.',
+  },
+  {
     icon: HeartHandshake,
-    t: 'Atendimento humano',
-    d: 'Você fala direto com quem entende do seu caso. Sem fila, sem robô, sem letrinha miúda.',
+    t: 'Atendimento humanizado',
+    d: 'Você fala direto com quem entende do seu caso. Conversa de verdade — não roteiro de atendimento.',
   },
   {
-    icon: Sparkles,
-    t: 'Linguagem clara',
-    d: 'Explicamos os números em português. Decisões mais confiantes, sem termo técnico desnecessário.',
+    icon: LineChart,
+    t: 'Visão estratégica',
+    d: 'Mais que apurar tributos: olhamos os números pra mostrar onde dá pra economizar e onde dá pra crescer.',
   },
   {
-    icon: LayoutGrid,
-    t: 'Solução completa',
-    d: 'Da abertura à folha, do IR ao certificado. Um único parceiro para toda a vida da sua empresa.',
-  },
-  {
-    icon: Zap,
-    t: '100% digital',
-    d: 'Assinatura eletrônica, documentos online e suporte ágil. Você resolve tudo sem sair de casa.',
+    icon: CalendarCheck,
+    t: 'Hora marcada',
+    d: 'Você agenda seu horário e fala com quem decide. Sem ficar pulando entre atendentes que nunca conhecem você.',
   },
 ]
 
@@ -73,7 +73,7 @@ export default function About() {
     <section
       ref={ref}
       id="sobre"
-      className="relative py-28 lg:py-36 bg-[#f5f1e8] text-[#1a1612] overflow-hidden"
+      className="relative py-28 lg:py-36 bg-[#ffffff] text-[#1a1612] overflow-hidden"
     >
       {/* subtle texture */}
       <div
@@ -83,9 +83,9 @@ export default function About() {
             "url(\"data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E\")",
         }}
       />
-      {/* subtle gold glow */}
-      <div className="absolute -top-32 -left-32 w-[500px] h-[500px] rounded-full bg-[#d4a017]/8 blur-3xl pointer-events-none" />
-      <div className="absolute -bottom-32 -right-32 w-[400px] h-[400px] rounded-full bg-[#d4a017]/10 blur-3xl pointer-events-none" />
+      {/* subtle orange glow */}
+      <div className="absolute -top-32 -left-32 w-[500px] h-[500px] rounded-full bg-[#ed5a08]/10 blur-3xl pointer-events-none" />
+      <div className="absolute -bottom-32 -right-32 w-[400px] h-[400px] rounded-full bg-[#ed5a08]/12 blur-3xl pointer-events-none" />
 
       <div className="relative max-w-[1400px] mx-auto px-8">
         <div className="grid lg:grid-cols-12 gap-16 items-center mb-20 lg:mb-28">
@@ -93,61 +93,60 @@ export default function About() {
           <div className="lg:col-span-5 relative">
             <div className="relative aspect-[4/5] overflow-hidden rounded-2xl">
               <img
-                src="/hero.webp"
-                alt=""
+                src="/sobre.webp"
+                alt="Equipe BC Gestão Contábil"
                 className="ab-anim w-full h-full object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[#1a1612]/40 via-transparent to-transparent" />
             </div>
-            <div className="absolute -top-6 -right-6 w-32 h-32 border-2 border-[#d4a017] -z-0 rounded-2xl" />
-            <div className="absolute -bottom-6 -left-6 w-28 h-28 bg-[#d4a017]/15 -z-0 rounded-2xl" />
+            <div className="absolute -top-6 -right-6 w-32 h-32 border-2 border-[#ed5a08] -z-0 rounded-2xl" />
+            <div className="absolute -bottom-6 -left-6 w-28 h-28 bg-[#ed5a08]/20 -z-0 rounded-2xl" />
           </div>
 
           {/* text */}
           <div className="lg:col-span-7 lg:pl-8">
-            <div className="ab-anim inline-flex items-center gap-3 text-[0.7rem] tracking-[0.35em] uppercase text-[#8c5b11] font-medium mb-8">
-              <span className="w-8 h-px bg-[#8c5b11]" />
+            <div className="ab-anim inline-flex items-center gap-3 text-[0.7rem] tracking-[0.35em] uppercase text-[#ed5a08] font-medium mb-8">
+              <span className="w-8 h-px bg-[#ed5a08]" />
               Sobre nós
             </div>
 
             <h2 className="ab-anim font-display text-4xl sm:text-5xl lg:text-6xl leading-[1.05] mb-10">
-              Contabilidade pensada{' '}
-              <span className="gold-text italic font-light">pra quem realiza.</span>
+              Contabilidade <span className="gold-text italic font-light">de gente pra gente.</span>
             </h2>
 
             <div className="ab-anim space-y-5 text-[#3d3530] leading-relaxed text-lg font-light max-w-xl mb-10">
               <p>
-                A Antonello Contabilidade existe pra simplificar a vida de quem empreende.
-                Cuidamos da rotina contábil, fiscal e trabalhista com atenção real — tratando
-                cada cliente como único, do MEI à empresa estabelecida.
+                A BC Gestão Contábil nasceu pra mostrar que o contador pode ser muito
+                mais do que quem manda a guia no fim do mês. Aqui você tem um time que
+                conhece seu negócio, responde rápido e ajuda você a tomar decisões.
               </p>
               <p>
-                Você foca no negócio. A gente cuida dos números, dos prazos e da burocracia.
+                Unimos a tecnologia que acelera o dia a dia com o atendimento humanizado
+                que faz diferença na hora de decidir — porque número sem contexto não
+                vira estratégia.
               </p>
             </div>
 
             <a
-              href="https://wa.me/5551991329065?text=Ol%C3%A1!%20Quero%20conhecer%20a%20Antonello%20Contabilidade."
+              href="https://wa.me/5524998322300?text=Ol%C3%A1!%20Quero%20agendar%20uma%20conversa%20com%20a%20BC%20Gest%C3%A3o%20Cont%C3%A1bil."
               target="_blank"
               rel="noreferrer"
               className="ab-anim btn-gold"
             >
               <IconWhatsApp size={18} />
-              Fale conosco
+              Agendar conversa
             </a>
           </div>
         </div>
 
         {/* differentials */}
-        <div className="pt-16 border-t border-[#d4a017]/25">
+        <div className="pt-16 border-t border-[#ed5a08]/30">
           <div className="ab-anim text-center mb-14">
-            <div className="text-[0.7rem] tracking-[0.35em] uppercase text-[#8c5b11] font-medium mb-4">
-              Por que a Antonello
+            <div className="text-[0.7rem] tracking-[0.35em] uppercase text-[#ed5a08] font-medium mb-4">
+              Por que a BC Gestão
             </div>
             <h3 className="font-display text-3xl sm:text-4xl lg:text-5xl leading-[1.1] text-[#1a1612]">
-              O que faz a diferença
-              <br />
-              <span className="gold-text italic font-light">no nosso atendimento.</span>
+              O jeito BC <span className="gold-text italic font-light">de cuidar do seu CNPJ.</span>
             </h3>
           </div>
 
@@ -156,14 +155,14 @@ export default function About() {
               const Icon = it.icon
               return (
                 <div key={i} className="ab-diff group relative">
-                  <div className="w-16 h-16 rounded-full bg-gradient-to-br from-[#efc94f] to-[#b07d10] flex items-center justify-center shadow-lg shadow-[#d4a017]/30 group-hover:scale-105 transition-transform duration-300 mb-6">
-                    <Icon size={26} strokeWidth={1.5} className="text-[#1a1612]" />
+                  <div className="w-16 h-16 rounded-full bg-gradient-to-br from-[#ed5a08] to-[#ed5a08] flex items-center justify-center shadow-lg shadow-[#ed5a08]/35 group-hover:scale-105 transition-transform duration-300 mb-6">
+                    <Icon size={26} strokeWidth={1.5} className="text-white" />
                   </div>
 
                   <h4 className="font-display text-2xl mb-3 text-[#1a1612]">
                     {it.t}
                   </h4>
-                  <div className="w-10 h-px bg-[#d4a017] mb-4" />
+                  <div className="w-10 h-px bg-[#ed5a08] mb-4" />
                   <p className="text-[0.95rem] text-[#3d3530]/85 leading-relaxed font-light">
                     {it.d}
                   </p>

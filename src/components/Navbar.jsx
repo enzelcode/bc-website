@@ -1,8 +1,9 @@
 import { useEffect, useState } from 'react'
 import Logo from './Logo'
 
-const INSTAGRAM = 'https://www.instagram.com/antonellocontabilidade/'
-const WHATSAPP = 'https://wa.me/5551991329065'
+const INSTAGRAM = 'https://www.instagram.com/p/DL7klseOAQ7/'
+const WHATSAPP_FIXO = 'https://wa.me/552430320205'
+const WHATSAPP_CEL = 'https://wa.me/5524998322300'
 
 const links = [
   { href: '#sobre', label: 'Sobre' },
@@ -48,14 +49,14 @@ export default function Navbar() {
       }`}
     >
       <div className="max-w-[1400px] mx-auto px-8 flex items-center justify-between">
-        <a href="#top"><Logo /></a>
+        <a href="#top" className="block"><Logo className="h-20 w-auto" /></a>
 
         <nav className="hidden lg:flex items-center gap-12">
           {links.map((l) => (
             <a
               key={l.href}
               href={l.href}
-              className="text-[0.8rem] tracking-[0.2em] uppercase text-white/70 hover:text-gold-300 transition-colors"
+              className="text-[0.8rem] tracking-[0.2em] uppercase text-white/70 hover:text-gold-500 transition-colors"
             >
               {l.label}
             </a>
@@ -68,16 +69,27 @@ export default function Navbar() {
             target="_blank"
             rel="noreferrer"
             aria-label="Instagram"
-            className="w-10 h-10 rounded-full flex items-center justify-center border border-gold-500/40 text-gold-200 hover:bg-gold-500 hover:text-ink-950 hover:border-transparent transition-all"
+            className="w-10 h-10 rounded-full flex items-center justify-center border border-gold-500/40 text-gold-500 hover:bg-gold-500 hover:text-white hover:border-transparent transition-all"
           >
             <IconInstagram />
           </a>
           <a
-            href={WHATSAPP}
+            href={WHATSAPP_FIXO}
             target="_blank"
             rel="noreferrer"
-            aria-label="WhatsApp"
-            className="w-10 h-10 rounded-full flex items-center justify-center border border-gold-500/40 text-gold-200 hover:bg-gold-500 hover:text-ink-950 hover:border-transparent transition-all"
+            aria-label="WhatsApp (24) 3032-0205"
+            title="(24) 3032-0205"
+            className="w-10 h-10 rounded-full flex items-center justify-center border border-gold-500/40 text-gold-500 hover:bg-gold-500 hover:text-white hover:border-transparent transition-all"
+          >
+            <IconWhatsApp />
+          </a>
+          <a
+            href={WHATSAPP_CEL}
+            target="_blank"
+            rel="noreferrer"
+            aria-label="WhatsApp (24) 9 9832-2300"
+            title="(24) 9 9832-2300"
+            className="w-10 h-10 rounded-full flex items-center justify-center border border-gold-500/40 text-gold-500 hover:bg-gold-500 hover:text-white hover:border-transparent transition-all"
           >
             <IconWhatsApp />
           </a>
@@ -88,9 +100,9 @@ export default function Navbar() {
           className="lg:hidden flex flex-col gap-1.5 p-2"
           aria-label="Menu"
         >
-          <span className={`block w-6 h-px bg-gold-300 transition-transform ${open ? 'rotate-45 translate-y-1.5' : ''}`} />
-          <span className={`block w-6 h-px bg-gold-300 transition-opacity ${open ? 'opacity-0' : ''}`} />
-          <span className={`block w-6 h-px bg-gold-300 transition-transform ${open ? '-rotate-45 -translate-y-1.5' : ''}`} />
+          <span className={`block w-6 h-px bg-gold-500 transition-transform ${open ? 'rotate-45 translate-y-1.5' : ''}`} />
+          <span className={`block w-6 h-px bg-gold-500 transition-opacity ${open ? 'opacity-0' : ''}`} />
+          <span className={`block w-6 h-px bg-gold-500 transition-transform ${open ? '-rotate-45 -translate-y-1.5' : ''}`} />
         </button>
       </div>
 
@@ -102,29 +114,38 @@ export default function Navbar() {
                 key={l.href}
                 href={l.href}
                 onClick={() => setOpen(false)}
-                className="text-sm tracking-[0.2em] uppercase text-white/80 hover:text-gold-300"
+                className="text-sm tracking-[0.2em] uppercase text-white/80 hover:text-gold-500"
               >
                 {l.label}
               </a>
             ))}
-            <div className="flex gap-3 pt-2">
+            <div className="flex flex-col gap-3 pt-2">
+              <a
+                href={WHATSAPP_FIXO}
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex items-center gap-3 px-4 py-3 rounded-full border border-gold-500/40 text-gold-500"
+              >
+                <IconWhatsApp size={18} />
+                <span className="text-sm">WhatsApp Fixo · (24) 3032‑0205</span>
+              </a>
+              <a
+                href={WHATSAPP_CEL}
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex items-center gap-3 px-4 py-3 rounded-full bg-gold-500 text-white"
+              >
+                <IconWhatsApp size={18} />
+                <span className="text-sm">WhatsApp Celular · (24) 9 9832‑2300</span>
+              </a>
               <a
                 href={INSTAGRAM}
                 target="_blank"
                 rel="noreferrer"
-                aria-label="Instagram"
-                className="w-11 h-11 rounded-full flex items-center justify-center border border-gold-500/40 text-gold-200"
+                className="inline-flex items-center gap-3 px-4 py-3 rounded-full border border-gold-500/40 text-gold-500"
               >
-                <IconInstagram />
-              </a>
-              <a
-                href={WHATSAPP}
-                target="_blank"
-                rel="noreferrer"
-                aria-label="WhatsApp"
-                className="w-11 h-11 rounded-full flex items-center justify-center border border-gold-500/40 text-gold-200"
-              >
-                <IconWhatsApp />
+                <IconInstagram size={18} />
+                <span className="text-sm">Instagram</span>
               </a>
             </div>
           </div>

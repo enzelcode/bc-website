@@ -1,7 +1,8 @@
 import Logo from './Logo'
 
-const INSTAGRAM = 'https://www.instagram.com/antonellocontabilidade/'
-const WHATSAPP = 'https://wa.me/5551991329065'
+const INSTAGRAM = 'https://www.instagram.com/p/DL7klseOAQ7/'
+const WHATSAPP_FIXO = 'https://wa.me/552430320205'
+const WHATSAPP_CEL = 'https://wa.me/5524998322300'
 
 function IconInstagram({ size = 16 }) {
   return (
@@ -27,35 +28,58 @@ export default function Footer() {
       <div className="max-w-[1400px] mx-auto px-8">
         <div className="grid lg:grid-cols-12 gap-12 mb-16">
           <div className="lg:col-span-6">
-            <Logo />
+            <Logo className="h-20 w-auto" />
             <p className="text-white/55 leading-relaxed mt-8 max-w-sm font-light">
-              Soluções contábeis para o crescimento da sua empresa.
+              Mais que contador, parceiro do seu negócio. Tecnologia e atendimento
+              humanizado pra você decidir melhor — não só pagar imposto.
             </p>
+            <a
+              href="https://www.google.com/maps/search/?api=1&query=Av.%20Augusto%20de%20Carvalho%2C%20781%20-%20Loja%202%20-%20Jardim%20Bras%C3%ADlia%20II%2C%20Resende%20-%20RJ%2C%2027516-240"
+              target="_blank"
+              rel="noreferrer"
+              className="mt-6 inline-flex items-start gap-3 text-sm text-white/55 hover:text-gold-500 transition-colors max-w-sm font-light not-italic"
+            >
+              <svg viewBox="0 0 24 24" width={16} height={16} fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" className="mt-1 flex-shrink-0">
+                <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z" />
+                <circle cx="12" cy="10" r="3" />
+              </svg>
+              <span>
+                Av. Augusto de Carvalho, 781 — Loja 2<br />
+                Jardim Brasília II, Resende — RJ · 27516-240
+              </span>
+            </a>
           </div>
 
           <div className="lg:col-span-3">
-            <div className="text-[0.65rem] tracking-[0.3em] uppercase text-gold-400 mb-6">Serviços</div>
+            <div className="text-[0.65rem] tracking-[0.3em] uppercase text-gold-500 mb-6">Serviços</div>
             <ul className="space-y-3 text-sm text-white/60 font-light">
-              <li><a href="#servicos" className="hover:text-gold-200 transition-colors">Abertura e Baixa PJ</a></li>
-              <li><a href="#servicos" className="hover:text-gold-200 transition-colors">Folha de Pagamento</a></li>
-              <li><a href="#servicos" className="hover:text-gold-200 transition-colors">Notas Fiscais</a></li>
-              <li><a href="#servicos" className="hover:text-gold-200 transition-colors">Imposto de Renda</a></li>
-              <li><a href="#servicos" className="hover:text-gold-200 transition-colors">Certificado Digital</a></li>
-              <li><a href="#servicos" className="hover:text-gold-200 transition-colors">Regularização CPF/CNPJ</a></li>
+              <li><a href="#servicos" className="hover:text-gold-500 transition-colors">Abertura de CNPJ</a></li>
+              <li><a href="#servicos" className="hover:text-gold-500 transition-colors">Terceirização de RH</a></li>
+              <li><a href="#servicos" className="hover:text-gold-500 transition-colors">Certificado Digital</a></li>
+              <li><a href="#servicos" className="hover:text-gold-500 transition-colors">Recrutamento e Seleção</a></li>
+              <li><a href="#servicos" className="hover:text-gold-500 transition-colors">Planejamento Tributário</a></li>
             </ul>
           </div>
 
           <div className="lg:col-span-3">
-            <div className="text-[0.65rem] tracking-[0.3em] uppercase text-gold-400 mb-6">Contato</div>
+            <div className="text-[0.65rem] tracking-[0.3em] uppercase text-gold-500 mb-6">Contato</div>
             <ul className="space-y-3 text-sm text-white/60 font-light mb-6">
               <li>
-                <a href={WHATSAPP} target="_blank" rel="noreferrer" className="hover:text-gold-200 transition-colors">
-                  (51) 99132‑9065
+                <a href={WHATSAPP_CEL} target="_blank" rel="noreferrer" className="hover:text-gold-500 transition-colors inline-flex items-center gap-2">
+                  <IconWhatsApp size={14} />
+                  (24) 9 9832‑2300
                 </a>
               </li>
               <li>
-                <a href={INSTAGRAM} target="_blank" rel="noreferrer" className="hover:text-gold-200 transition-colors">
-                  @antonellocontabilidade
+                <a href={WHATSAPP_FIXO} target="_blank" rel="noreferrer" className="hover:text-gold-500 transition-colors inline-flex items-center gap-2">
+                  <IconWhatsApp size={14} />
+                  (24) 3032‑0205
+                </a>
+              </li>
+              <li>
+                <a href={INSTAGRAM} target="_blank" rel="noreferrer" className="hover:text-gold-500 transition-colors inline-flex items-center gap-2">
+                  <IconInstagram size={14} />
+                  Instagram
                 </a>
               </li>
             </ul>
@@ -65,16 +89,27 @@ export default function Footer() {
                 target="_blank"
                 rel="noreferrer"
                 aria-label="Instagram"
-                className="w-10 h-10 rounded-full flex items-center justify-center border border-gold-500/40 text-gold-200 hover:bg-gold-500 hover:text-ink-950 hover:border-transparent transition-all"
+                className="w-10 h-10 rounded-full flex items-center justify-center border border-gold-500/40 text-gold-500 hover:bg-gold-500 hover:text-white hover:border-transparent transition-all"
               >
                 <IconInstagram />
               </a>
               <a
-                href={WHATSAPP}
+                href={WHATSAPP_FIXO}
                 target="_blank"
                 rel="noreferrer"
-                aria-label="WhatsApp"
-                className="w-10 h-10 rounded-full flex items-center justify-center border border-gold-500/40 text-gold-200 hover:bg-gold-500 hover:text-ink-950 hover:border-transparent transition-all"
+                aria-label="WhatsApp Fixo"
+                title="(24) 3032-0205"
+                className="w-10 h-10 rounded-full flex items-center justify-center border border-gold-500/40 text-gold-500 hover:bg-gold-500 hover:text-white hover:border-transparent transition-all"
+              >
+                <IconWhatsApp />
+              </a>
+              <a
+                href={WHATSAPP_CEL}
+                target="_blank"
+                rel="noreferrer"
+                aria-label="WhatsApp Celular"
+                title="(24) 9 9832-2300"
+                className="w-10 h-10 rounded-full flex items-center justify-center bg-gold-500 text-white hover:bg-gold-500 transition-all"
               >
                 <IconWhatsApp />
               </a>
@@ -83,7 +118,7 @@ export default function Footer() {
         </div>
 
         <div className="pt-8 border-t border-white/10 text-xs text-white/35">
-          © {new Date().getFullYear()} Antonello Contabilidade
+          © {new Date().getFullYear()} BC Gestão Contábil
         </div>
       </div>
     </footer>

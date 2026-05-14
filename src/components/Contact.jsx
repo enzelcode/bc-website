@@ -4,8 +4,9 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
 gsap.registerPlugin(ScrollTrigger)
 
-const INSTAGRAM = 'https://www.instagram.com/antonellocontabilidade/'
-const WHATSAPP = 'https://wa.me/5551991329065'
+const INSTAGRAM = 'https://www.instagram.com/p/DL7klseOAQ7/'
+const WHATSAPP_FIXO = 'https://wa.me/552430320205'
+const WHATSAPP_CEL = 'https://wa.me/5524998322300'
 
 function IconWhatsApp({ size = 18 }) {
   return (
@@ -61,20 +62,20 @@ export default function Contact() {
   const handleSubmit = (e) => {
     e.preventDefault()
     const text = encodeURIComponent(
-      `Olá, Antonello Contabilidade!\n\n` +
+      `Olá, BC Gestão Contábil!\n\n` +
         `*Nome:* ${form.name}\n` +
         `*Telefone:* ${form.phone}\n` +
         `*Serviço:* ${form.service}\n\n` +
         `*Mensagem:*\n${form.message}`
     )
-    window.open(`${WHATSAPP}?text=${text}`, '_blank')
+    window.open(`${WHATSAPP_CEL}?text=${text}`, '_blank')
   }
 
   return (
     <section
       ref={ref}
       id="contato"
-      className="relative py-28 lg:py-36 bg-[#f5f1e8] text-[#1a1612] overflow-hidden"
+      className="relative py-28 lg:py-36 bg-[#ffffff] text-[#1a1612] overflow-hidden"
     >
       {/* texture */}
       <div
@@ -84,41 +85,57 @@ export default function Contact() {
             "url(\"data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E\")",
         }}
       />
-      {/* gold glows */}
-      <div className="absolute -top-40 -right-40 w-[500px] h-[500px] rounded-full bg-[#d4a017]/10 blur-3xl pointer-events-none" />
-      <div className="absolute -bottom-40 -left-40 w-[400px] h-[400px] rounded-full bg-[#d4a017]/8 blur-3xl pointer-events-none" />
+      {/* orange glows */}
+      <div className="absolute -top-40 -right-40 w-[500px] h-[500px] rounded-full bg-[#ed5a08]/12 blur-3xl pointer-events-none" />
+      <div className="absolute -bottom-40 -left-40 w-[400px] h-[400px] rounded-full bg-[#ed5a08]/10 blur-3xl pointer-events-none" />
 
       <div className="relative max-w-[1400px] mx-auto px-8 grid lg:grid-cols-12 gap-12 lg:gap-16 items-start">
         {/* left */}
         <div className="lg:col-span-5 lg:sticky lg:top-28">
-          <div className="c-anim inline-flex items-center gap-3 text-[0.7rem] tracking-[0.35em] uppercase text-[#8c5b11] font-medium mb-6">
-            <span className="w-8 h-px bg-[#8c5b11]" />
+          <div className="c-anim inline-flex items-center gap-3 text-[0.7rem] tracking-[0.35em] uppercase text-[#ed5a08] font-medium mb-6">
+            <span className="w-8 h-px bg-[#ed5a08]" />
             Contato
           </div>
 
           <h2 className="c-anim font-display text-4xl sm:text-5xl lg:text-6xl leading-[1.05] mb-8">
-            Vamos conversar <br />
-            <span className="gold-text italic font-light">sobre seu negócio.</span>
+            Agende seu horário <br />
+            <span className="gold-text italic font-light">com a BC.</span>
           </h2>
 
           <p className="c-anim text-[#3d3530] font-light leading-relaxed mb-10 max-w-md text-lg">
-            Preencha o formulário ao lado ou fale direto pelos canais abaixo. Sem
-            compromisso e sem cobrança pela conversa inicial.
+            Preencha o formulário ou fale direto pelos canais ao lado. A primeira
+            conversa é sem compromisso — e o objetivo dela é te entender, não
+            vender um plano genérico.
           </p>
 
           <div className="c-anim space-y-4">
             <a
-              href={WHATSAPP}
+              href={WHATSAPP_CEL}
               target="_blank"
               rel="noreferrer"
-              className="group flex items-center gap-5 p-5 rounded-2xl bg-white/60 border border-[#d4a017]/20 hover:border-[#d4a017]/60 hover:bg-white transition-all duration-300"
+              className="group flex items-center gap-5 p-5 rounded-2xl bg-white/60 border border-[#ed5a08]/25 hover:border-[#ed5a08]/70 hover:bg-white transition-all duration-300"
             >
-              <div className="w-14 h-14 rounded-full bg-gradient-to-br from-[#efc94f] to-[#b07d10] flex items-center justify-center text-[#1a1612] shadow-lg shadow-[#d4a017]/25 group-hover:scale-105 transition-transform">
+              <div className="w-14 h-14 rounded-full bg-gradient-to-br from-[#ed5a08] to-[#ed5a08] flex items-center justify-center text-white shadow-lg shadow-[#ed5a08]/30 group-hover:scale-105 transition-transform">
                 <IconWhatsApp size={22} />
               </div>
               <div>
-                <div className="text-[0.65rem] tracking-[0.3em] uppercase text-[#8c5b11] mb-1">WhatsApp</div>
-                <div className="font-display text-xl text-[#1a1612]">(51) 99132‑9065</div>
+                <div className="text-[0.65rem] tracking-[0.3em] uppercase text-[#ed5a08] mb-1">WhatsApp · Celular</div>
+                <div className="font-display text-xl text-[#1a1612]">(24) 9 9832‑2300</div>
+              </div>
+            </a>
+
+            <a
+              href={WHATSAPP_FIXO}
+              target="_blank"
+              rel="noreferrer"
+              className="group flex items-center gap-5 p-5 rounded-2xl bg-white/60 border border-[#ed5a08]/25 hover:border-[#ed5a08]/70 hover:bg-white transition-all duration-300"
+            >
+              <div className="w-14 h-14 rounded-full bg-gradient-to-br from-[#ed5a08] to-[#ed5a08] flex items-center justify-center text-white shadow-lg shadow-[#ed5a08]/30 group-hover:scale-105 transition-transform">
+                <IconWhatsApp size={22} />
+              </div>
+              <div>
+                <div className="text-[0.65rem] tracking-[0.3em] uppercase text-[#ed5a08] mb-1">WhatsApp · Fixo</div>
+                <div className="font-display text-xl text-[#1a1612]">(24) 3032‑0205</div>
               </div>
             </a>
 
@@ -126,14 +143,35 @@ export default function Contact() {
               href={INSTAGRAM}
               target="_blank"
               rel="noreferrer"
-              className="group flex items-center gap-5 p-5 rounded-2xl bg-white/60 border border-[#d4a017]/20 hover:border-[#d4a017]/60 hover:bg-white transition-all duration-300"
+              className="group flex items-center gap-5 p-5 rounded-2xl bg-white/60 border border-[#ed5a08]/25 hover:border-[#ed5a08]/70 hover:bg-white transition-all duration-300"
             >
-              <div className="w-14 h-14 rounded-full bg-gradient-to-br from-[#efc94f] to-[#b07d10] flex items-center justify-center text-[#1a1612] shadow-lg shadow-[#d4a017]/25 group-hover:scale-105 transition-transform">
+              <div className="w-14 h-14 rounded-full bg-gradient-to-br from-[#ed5a08] to-[#ed5a08] flex items-center justify-center text-white shadow-lg shadow-[#ed5a08]/30 group-hover:scale-105 transition-transform">
                 <IconInstagram size={22} />
               </div>
               <div>
-                <div className="text-[0.65rem] tracking-[0.3em] uppercase text-[#8c5b11] mb-1">Instagram</div>
-                <div className="font-display text-xl text-[#1a1612]">@antonellocontabilidade</div>
+                <div className="text-[0.65rem] tracking-[0.3em] uppercase text-[#ed5a08] mb-1">Instagram</div>
+                <div className="font-display text-xl text-[#1a1612]">Veja nosso perfil</div>
+              </div>
+            </a>
+
+            <a
+              href="https://www.google.com/maps/search/?api=1&query=Av.%20Augusto%20de%20Carvalho%2C%20781%20-%20Loja%202%20-%20Jardim%20Bras%C3%ADlia%20II%2C%20Resende%20-%20RJ%2C%2027516-240"
+              target="_blank"
+              rel="noreferrer"
+              className="group flex items-center gap-5 p-5 rounded-2xl bg-white/60 border border-[#ed5a08]/25 hover:border-[#ed5a08]/70 hover:bg-white transition-all duration-300"
+            >
+              <div className="w-14 h-14 rounded-full bg-gradient-to-br from-[#ed5a08] to-[#ed5a08] flex items-center justify-center text-white shadow-lg shadow-[#ed5a08]/30 group-hover:scale-105 transition-transform">
+                <svg viewBox="0 0 24 24" width={22} height={22} fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z" />
+                  <circle cx="12" cy="10" r="3" />
+                </svg>
+              </div>
+              <div>
+                <div className="text-[0.65rem] tracking-[0.3em] uppercase text-[#ed5a08] mb-1">Endereço</div>
+                <div className="font-display text-lg text-[#1a1612] leading-snug">
+                  Av. Augusto de Carvalho, 781 — Loja 2<br />
+                  <span className="text-base text-[#1a1612]/70 font-sans font-light">Jardim Brasília II, Resende — RJ · 27516-240</span>
+                </div>
               </div>
             </a>
           </div>
@@ -142,7 +180,7 @@ export default function Contact() {
         {/* form right */}
         <form
           onSubmit={handleSubmit}
-          className="c-form lg:col-span-7 bg-white rounded-3xl p-8 lg:p-12 shadow-xl shadow-[#1a1612]/5 border border-[#d4a017]/15"
+          className="c-form lg:col-span-7 bg-white rounded-3xl p-8 lg:p-12 shadow-xl shadow-[#1a1612]/5 border border-[#ed5a08]/20"
         >
           <div className="mb-8">
             <h3 className="font-display text-2xl lg:text-3xl text-[#1a1612] mb-2">
@@ -155,61 +193,60 @@ export default function Contact() {
 
           <div className="grid sm:grid-cols-2 gap-5">
             <div className="sm:col-span-2">
-              <label className="block text-[0.65rem] tracking-[0.3em] uppercase text-[#8c5b11] mb-2">
+              <label className="block text-[0.65rem] tracking-[0.3em] uppercase text-[#ed5a08] mb-2">
                 Nome
               </label>
               <input
                 required
                 value={form.name}
                 onChange={(e) => setForm({ ...form, name: e.target.value })}
-                className="w-full bg-[#faf7f0] border border-[#d4a017]/15 focus:border-[#d4a017] focus:bg-white rounded-xl px-4 py-3.5 text-[#1a1612] outline-none transition-all placeholder:text-[#5a4f47]/40"
+                className="w-full bg-[#ffffff] border border-[#ed5a08]/20 focus:border-[#ed5a08] focus:bg-white rounded-xl px-4 py-3.5 text-[#1a1612] outline-none transition-all placeholder:text-[#5a4f47]/40"
                 placeholder="Como podemos te chamar?"
               />
             </div>
 
             <div className="sm:col-span-2">
-              <label className="block text-[0.65rem] tracking-[0.3em] uppercase text-[#8c5b11] mb-2">
+              <label className="block text-[0.65rem] tracking-[0.3em] uppercase text-[#ed5a08] mb-2">
                 WhatsApp
               </label>
               <input
                 required
                 value={form.phone}
                 onChange={(e) => setForm({ ...form, phone: e.target.value })}
-                className="w-full bg-[#faf7f0] border border-[#d4a017]/15 focus:border-[#d4a017] focus:bg-white rounded-xl px-4 py-3.5 text-[#1a1612] outline-none transition-all placeholder:text-[#5a4f47]/40"
-                placeholder="(51) 9 9999‑9999"
+                className="w-full bg-[#ffffff] border border-[#ed5a08]/20 focus:border-[#ed5a08] focus:bg-white rounded-xl px-4 py-3.5 text-[#1a1612] outline-none transition-all placeholder:text-[#5a4f47]/40"
+                placeholder="(24) 9 9999‑9999"
               />
             </div>
 
             <div className="sm:col-span-2">
-              <label className="block text-[0.65rem] tracking-[0.3em] uppercase text-[#8c5b11] mb-2">
+              <label className="block text-[0.65rem] tracking-[0.3em] uppercase text-[#ed5a08] mb-2">
                 Serviço de interesse
               </label>
               <select
                 required
                 value={form.service}
                 onChange={(e) => setForm({ ...form, service: e.target.value })}
-                className="w-full bg-[#faf7f0] border border-[#d4a017]/15 focus:border-[#d4a017] focus:bg-white rounded-xl px-4 py-3.5 text-[#1a1612] outline-none transition-all"
+                className="w-full bg-[#ffffff] border border-[#ed5a08]/25 focus:border-[#ed5a08] focus:bg-white rounded-xl px-4 py-3.5 text-[#1a1612] outline-none transition-all"
               >
                 <option value="">Selecione um serviço</option>
-                <option>Abertura / Baixa PJ</option>
-                <option>Folha de Pagamento</option>
-                <option>Notas Fiscais</option>
-                <option>Imposto de Renda</option>
-                <option>Certificado Digital A1 / A3</option>
-                <option>Regularização CPF / CNPJ</option>
+                <option>Abertura de CNPJ</option>
+                <option>Terceirização de RH</option>
+                <option>Certificado Digital</option>
+                <option>Recrutamento e Seleção</option>
+                <option>Planejamento Tributário</option>
                 <option>Outro</option>
               </select>
             </div>
 
             <div className="sm:col-span-2">
-              <label className="block text-[0.65rem] tracking-[0.3em] uppercase text-[#8c5b11] mb-2">
+              <label className="block text-[0.65rem] tracking-[0.3em] uppercase text-[#ed5a08] mb-2">
                 Mensagem
               </label>
               <textarea
                 rows="4"
                 value={form.message}
                 onChange={(e) => setForm({ ...form, message: e.target.value })}
-                className="w-full bg-[#faf7f0] border border-[#d4a017]/15 focus:border-[#d4a017] focus:bg-white rounded-xl px-4 py-3.5 text-[#1a1612] outline-none transition-all placeholder:text-[#5a4f47]/40 resize-none"
+                className="w-full bg-[#ffffff] border border-[#ed5a08]/20 focus:border-[#ed5a08] focus:bg-white rounded-xl px-4 py-3.5 text-[#1a1612] outline-none transition-all placeholder:text-[#5a4f47]/40 resize-none"
                 placeholder="Conte um pouco sobre sua empresa ou sua dúvida..."
               />
             </div>

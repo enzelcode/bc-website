@@ -5,16 +5,16 @@ export default {
     extend: {
       colors: {
         gold: {
-          50: '#fdf9ed',
-          100: '#faf0c8',
-          200: '#f5e08e',
-          300: '#efc94f',
-          400: '#e9b624',
-          500: '#d4a017',
-          600: '#b07d10',
-          700: '#8c5b11',
-          800: '#734816',
-          900: '#623c18',
+          50: '#ed5a08',
+          100: '#ed5a08',
+          200: '#ed5a08',
+          300: '#ed5a08',
+          400: '#ed5a08',
+          500: '#ed5a08',
+          600: '#ed5a08',
+          700: '#ed5a08',
+          800: '#ed5a08',
+          900: '#ed5a08',
         },
         ink: {
           950: '#050505',
@@ -29,12 +29,12 @@ export default {
         mono: ['JetBrains Mono', 'monospace']
       },
       backgroundImage: {
-        'gold-gradient': 'linear-gradient(135deg, #f5e08e 0%, #d4a017 45%, #8c5b11 100%)',
-        'gold-shine': 'linear-gradient(110deg, #b07d10 0%, #f5e08e 45%, #efc94f 55%, #b07d10 100%)',
+        'gold-gradient': 'linear-gradient(135deg, #ed5a08 0%, #ed5a08 100%)',
+        'gold-shine': 'linear-gradient(110deg, #ed5a08 0%, #ed5a08 100%)',
       },
       boxShadow: {
-        'gold-glow': '0 0 40px rgba(212, 160, 23, 0.25)',
-        'gold-soft': '0 10px 40px -10px rgba(212, 160, 23, 0.4)',
+        'gold-glow': '0 0 40px rgba(237, 90, 8, 0.3)',
+        'gold-soft': '0 10px 40px -10px rgba(237, 90, 8, 0.45)',
       },
       animation: {
         'shine': 'shine 6s linear infinite',

@@ -15,51 +15,45 @@ function IconWhatsApp({ size = 18 }) {
 const services = [
   {
     n: '01',
-    t: 'Abertura e Baixa PJ',
-    d: 'Constituição e encerramento de empresas com toda a parte burocrática por nossa conta. Contrato social, Junta Comercial, inscrições municipal e estadual — você só assina.',
-    bullets: ['Contrato social e alterações', 'Junta Comercial e Receita Federal', 'Inscrições municipal e estadual'],
+    t: 'Abertura de CNPJ',
+    tag: 'Gratuita',
+    d: 'Constituição da sua empresa por nossa conta — do contrato social às inscrições. Você assina, a gente resolve.',
+    bullets: ['Sem taxa de abertura', 'Contrato social e Junta Comercial', 'Inscrições municipal e estadual'],
     img: '/service-1.webp',
-    msg: 'Olá! Quero falar sobre abertura ou baixa de PJ.',
+    msg: 'Olá! Quero abrir meu CNPJ com a BC Gestão Contábil.',
   },
   {
     n: '02',
-    t: 'Folha de Pagamento',
-    d: 'Cálculos, holerites, eSocial, férias, rescisões e tudo o que envolve a vida funcional do seu time — sem dor de cabeça.',
-    bullets: ['Holerites e cálculos mensais', 'eSocial, FGTS e INSS', 'Admissões, férias e rescisões'],
+    t: 'Terceirização de RH',
+    d: 'Folha de pagamento, eSocial, admissões, férias e rescisões — toda a rotina trabalhista no nosso colo, com agilidade e zero retrabalho pro seu time.',
+    bullets: ['Folha, holerites e eSocial', 'Admissões e desligamentos', 'Suporte humano no dia a dia'],
     img: '/service-2.webp',
-    msg: 'Olá! Quero falar sobre folha de pagamento.',
+    msg: 'Olá! Quero falar sobre terceirização de RH.',
   },
   {
     n: '03',
-    t: 'Notas Fiscais',
-    d: 'Emissão, gestão e escrituração de notas fiscais de produto e serviço — com suporte na configuração inicial.',
-    bullets: ['Emissão de NF‑e e NFS‑e', 'Configuração de prefeitura', 'Escrituração fiscal'],
-    img: '/service-3.webp',
-    msg: 'Olá! Quero falar sobre emissão de notas fiscais.',
+    t: 'Certificado Digital',
+    tag: 'Em minutos',
+    d: 'Emissão e renovação do seu Certificado Digital A1 ou A3 em poucos minutos, com videoconferência ou atendimento presencial.',
+    bullets: ['Certificado A1 (arquivo)', 'Certificado A3 (token/cartão)', 'Emissão em videoconferência'],
+    img: '/service-5.webp',
+    msg: 'Olá! Quero emitir um Certificado Digital.',
   },
   {
     n: '04',
-    t: 'Imposto de Renda',
-    d: 'Declaração de IR para pessoa física e jurídica — análise completa para você pagar o menor imposto dentro da lei.',
-    bullets: ['IRPF e IRPJ', 'Análise de restituição', 'Malha fina e retificações'],
-    img: '/service-4.webp',
-    msg: 'Olá! Quero falar sobre Imposto de Renda.',
+    t: 'Recrutamento e Seleção',
+    d: 'Encontramos os profissionais certos para o seu negócio — triagem, entrevistas e análise de perfil para você só receber os finalistas.',
+    bullets: ['Triagem e entrevistas', 'Análise de perfil e fit cultural', 'Entrega dos finalistas prontos'],
+    img: '/service-3.webp',
+    msg: 'Olá! Quero falar sobre recrutamento e seleção.',
   },
   {
     n: '05',
-    t: 'Certificado Digital A1 e A3',
-    d: 'Emissão e renovação do seu certificado digital para uso em órgãos públicos, e‑CAC, bancos e sistemas fiscais.',
-    bullets: ['Certificado A1 (arquivo)', 'Certificado A3 (token/cartão)', 'Renovação e suporte'],
-    img: '/service-5.webp',
-    msg: 'Olá! Quero emitir/renovar um certificado digital.',
-  },
-  {
-    n: '06',
-    t: 'Regularização CPF e CNPJ',
-    d: 'Resolução de pendências, dívidas e inconsistências para deixar sua situação 100% regular com a Receita Federal.',
-    bullets: ['Análise de pendências', 'Negociação de débitos', 'Reativação de inscrição'],
-    img: '/service-6.webp',
-    msg: 'Olá! Quero regularizar meu CPF ou CNPJ.',
+    t: 'Planejamento Tributário',
+    d: 'Análise estratégica do seu regime tributário pra pagar o menor imposto dentro da lei e aumentar a margem do seu negócio.',
+    bullets: ['Simples, Presumido ou Real', 'Análise de carga tributária', 'Economia dentro da lei'],
+    img: '/service-4.webp',
+    msg: 'Olá! Quero falar sobre planejamento tributário.',
   },
 ]
 
@@ -113,21 +107,22 @@ export default function Services() {
   return (
     <section ref={ref} id="servicos" className="relative py-28 lg:py-36 border-t border-white/5">
       <div className="max-w-[1400px] mx-auto px-8">
-        <div className="sv-head text-center max-w-2xl mx-auto mb-24">
+        <div className="sv-head text-center max-w-3xl mx-auto mb-24">
           <div className="eyebrow justify-center mb-6">Serviços</div>
           <h2 className="font-display text-4xl sm:text-5xl lg:text-6xl leading-[1.05]">
-            O que fazemos <span className="gold-text italic font-light">por você.</span>
+            Tecnologia com <span className="gold-text italic font-light">atendimento humanizado.</span>
           </h2>
-          <p className="mt-6 text-white/55 font-light leading-relaxed">
-            Soluções completas para empreendedores, profissionais liberais e empresas — tudo
-            no mesmo lugar e direto no seu WhatsApp.
+          <p className="mt-6 text-white/60 font-light leading-relaxed">
+            A BC Gestão Contábil une a tecnologia com o atendimento humanizado.
+            Nossos clientes contam com soluções completas — agende seu horário e
+            descubra que um contador faz muito mais que enviar guias de recolhimento de impostos.
           </p>
         </div>
 
         <div className="space-y-24 lg:space-y-32">
           {services.map((s, i) => {
             const reverse = i % 2 === 1
-            const link = `https://wa.me/5551991329065?text=${encodeURIComponent(s.msg)}`
+            const link = `https://wa.me/5524998322300?text=${encodeURIComponent(s.msg)}`
             return (
               <article
                 key={i}
@@ -152,11 +147,16 @@ export default function Services() {
                 </div>
 
                 <div className="sv-text lg:col-span-6 lg:px-4">
-                  <div className="text-[0.65rem] tracking-[0.35em] uppercase text-gold-400 mb-4">
+                  <div className="text-[0.65rem] tracking-[0.35em] uppercase text-gold-500 mb-4">
                     Serviço {s.n}
                   </div>
-                  <h3 className="font-display text-3xl sm:text-4xl lg:text-5xl leading-[1.05] mb-6">
+                  <h3 className="font-display text-3xl sm:text-4xl lg:text-5xl leading-[1.05] mb-3 flex flex-wrap items-baseline gap-x-4 gap-y-2">
                     {s.t}
+                    {s.tag && (
+                      <span className="text-xs tracking-[0.2em] uppercase text-white bg-gold-500 px-3 py-1 rounded-full font-sans font-medium align-middle">
+                        {s.tag}
+                      </span>
+                    )}
                   </h3>
                   <p className="text-white/65 leading-relaxed font-light text-lg mb-8 max-w-xl">
                     {s.d}
@@ -165,7 +165,7 @@ export default function Services() {
                   <ul className="space-y-3 mb-10 max-w-md">
                     {s.bullets.map((b, j) => (
                       <li key={j} className="flex items-start gap-3 text-white/75 text-[0.95rem]">
-                        <span className="mt-2 w-1.5 h-1.5 rounded-full bg-gold-400 flex-shrink-0" />
+                        <span className="mt-2 w-1.5 h-1.5 rounded-full bg-gold-500 flex-shrink-0" />
                         <span>{b}</span>
                       </li>
                     ))}

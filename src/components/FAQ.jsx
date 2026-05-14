@@ -14,32 +14,32 @@ function IconWhatsApp({ size = 18 }) {
 
 const faqs = [
   {
-    q: 'MEI precisa de contador?',
-    a: 'A lei não obriga o MEI a ter contador. Mas, na prática, ter apoio contábil evita erros comuns que podem custar caro: declaração anual fora do prazo, emissão errada de nota fiscal, excesso de faturamento e desenquadramento sem o cliente perceber.',
+    q: 'Como funciona a abertura de CNPJ gratuita?',
+    a: 'A gente cuida de todo o processo — contrato social, Junta Comercial, Receita Federal e inscrições municipal e estadual — sem cobrar taxa de abertura. Você só assina e começa a operar.',
   },
   {
-    q: 'Qual a diferença entre MEI, ME e EPP?',
-    a: 'O MEI é a categoria mais simples (faturamento até R$ 81 mil/ano, 1 funcionário). A ME (Microempresa) atende até R$ 360 mil/ano. A EPP (Empresa de Pequeno Porte) vai até R$ 4,8 milhões/ano. Cada uma tem obrigações e impostos diferentes.',
+    q: 'Posso trocar de contador a qualquer momento?',
+    a: 'Pode sim. Você não precisa avisar o contador atual antes. A gente solicita os arquivos digitais (Sped, balancetes, folha), assume as obrigações em andamento e comunica os órgãos competentes. Migração tranquila e sem dor de cabeça pra você.',
   },
   {
-    q: 'Qual o melhor regime tributário pra mim?',
-    a: 'Depende do seu faturamento, margem de lucro, atividade e número de funcionários. Os três principais são Simples Nacional, Lucro Presumido e Lucro Real. Fazemos um comparativo personalizado pra mostrar qual paga menos imposto na sua situação.',
+    q: 'O atendimento é só digital ou tem escritório físico?',
+    a: 'Os dois. Você resolve no WhatsApp, no e-mail e em reuniões por vídeo — ou agenda uma conversa presencial. A ideia é que você escolha o canal que faz mais sentido, não que se adapte ao nosso.',
   },
   {
-    q: 'Como funciona a troca de contador?',
-    a: 'Mais simples do que parece. Você não precisa avisar o contador atual antes. A gente solicita os arquivos digitais (Sped, balancetes, folha), assume as obrigações em curso e comunica os órgãos competentes. Sem dor de cabeça pra você.',
+    q: 'Como funciona o planejamento tributário?',
+    a: 'Analisamos seu faturamento, margem, atividade e estrutura para indicar o regime que paga menos imposto dentro da lei — Simples Nacional, Lucro Presumido ou Lucro Real. Mais que apurar tributo, mostramos onde dá pra economizar.',
   },
   {
-    q: 'Preciso ir até o escritório ou tudo é digital?',
-    a: 'Tudo pode ser resolvido digitalmente: envio de documentos, assinatura eletrônica, reuniões por vídeo e atendimento pelo WhatsApp. Se preferir presencial, também atendemos — você escolhe.',
+    q: 'O Certificado Digital é mesmo emitido em minutos?',
+    a: 'É. A emissão é feita por videoconferência ou presencial, com validação biométrica. Você sai com o seu A1 ou A3 pronto pra usar em e-CAC, nota fiscal e bancos no mesmo atendimento.',
   },
   {
-    q: 'Qual a diferença entre certificado A1 e A3?',
-    a: 'O A1 é um arquivo digital instalado no computador, validade de 1 ano. O A3 fica em um token USB ou cartão, validade de até 3 anos. O A1 é mais prático para emissão de NFs; o A3 mais seguro para uso esporádico em sistemas do governo.',
+    q: 'Vocês cuidam de toda a folha de pagamento?',
+    a: 'Sim. Holerites, eSocial, FGTS, INSS, admissões, férias e rescisões — toda a rotina trabalhista fica conosco. Você só recebe o que precisa aprovar e quando precisa aprovar.',
   },
   {
-    q: 'Quanto custa contratar um contador?',
-    a: 'O valor varia conforme o regime tributário, volume de notas, número de funcionários e serviços contratados. Fala com a gente no WhatsApp que montamos uma proposta sob medida pro seu caso, sem compromisso.',
+    q: 'Quanto custa contratar a BC Gestão Contábil?',
+    a: 'O valor varia conforme regime tributário, volume de notas, número de funcionários e serviços contratados. Agende uma conversa que a gente monta uma proposta sob medida pro seu caso, sem compromisso.',
   },
 ]
 
@@ -63,12 +63,12 @@ function Item({ q, a, open, onClick, idx }) {
         className="w-full flex items-start justify-between gap-8 py-8 text-left group"
       >
         <div className="flex items-start gap-6 lg:gap-10 flex-1">
-          <span className={`font-mono text-xs pt-2 transition-colors ${open ? 'text-gold-300' : 'text-white/30'}`}>
+          <span className={`font-mono text-xs pt-2 transition-colors ${open ? 'text-gold-500' : 'text-white/30'}`}>
             {String(idx + 1).padStart(2, '0')}
           </span>
           <span
             className={`font-display text-xl sm:text-2xl lg:text-3xl leading-tight transition-colors ${
-              open ? 'gold-text italic' : 'text-white group-hover:text-gold-200'
+              open ? 'gold-text italic' : 'text-white group-hover:text-gold-500'
             }`}
           >
             {q}
@@ -78,7 +78,7 @@ function Item({ q, a, open, onClick, idx }) {
           className={`flex-shrink-0 w-10 h-10 rounded-full border flex items-center justify-center text-xl font-light transition-all duration-300 ${
             open
               ? 'bg-gold-gradient text-ink-950 border-transparent rotate-45'
-              : 'border-gold-500/30 text-gold-300'
+              : 'border-gold-500/30 text-gold-500'
           }`}
         >
           +
@@ -135,21 +135,21 @@ export default function FAQ() {
           <div className="lg:col-span-5 lg:sticky lg:top-28 lg:self-start">
             <div className="f-anim eyebrow mb-6">Perguntas frequentes</div>
             <h2 className="f-anim font-display text-4xl sm:text-5xl lg:text-6xl leading-[1.05] mb-8">
-              Suas dúvidas, <br />
-              <span className="gold-text italic font-light">respondidas.</span>
+              Tira a dúvida <br />
+              <span className="gold-text italic font-light">antes de decidir.</span>
             </h2>
             <p className="f-anim text-white/55 font-light leading-relaxed mb-8 max-w-sm">
-              Reunimos as perguntas que mais escutamos de empreendedores. Se a sua
-              não estiver aqui, é só chamar.
+              Reunimos o que mais escutamos de quem está abrindo, mudando ou
+              repensando a contabilidade. Se faltar algo, é só chamar.
             </p>
             <a
-              href="https://wa.me/5551991329065?text=Ol%C3%A1!%20Tenho%20uma%20d%C3%BAvida%20sobre%20contabilidade."
+              href="https://wa.me/5524998322300?text=Ol%C3%A1!%20Tenho%20uma%20d%C3%BAvida%20pra%20BC%20Gest%C3%A3o%20Cont%C3%A1bil."
               target="_blank"
               rel="noreferrer"
               className="f-anim btn-gold"
             >
               <IconWhatsApp size={18} />
-              Tirar minha dúvida
+              Tirar dúvida agora
             </a>
           </div>
 
